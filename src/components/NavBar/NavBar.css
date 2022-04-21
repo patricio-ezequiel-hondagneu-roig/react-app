@@ -1,0 +1,18 @@
+.btn-outline-success:hover {
+    color: black !important;
+    background-color: rgba(182, 182, 182, 0.699) !important;
+    border-color: rgba(255, 217, 0, 0.562) !important;
+}
+
+.btn-outline-success {
+    color: rgba(192, 189, 189, 0.788) !important;
+    border-color: rgba(255, 217, 0, 0.288) !important;
+}
+
+.nav-link:hover {
+    color: rgba(255, 217, 0, 0.562) !important
+}
+
+.nav-link:focus {
+    color: rgba(255, 217, 0, 0.800) !important
+}

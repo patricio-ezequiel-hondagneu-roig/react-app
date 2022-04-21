@@ -1,18 +1,18 @@
 
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import Card from "./components/Card/Card"
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
-
-  const styles = {
-    header: ""
-  }
 
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <h1 className={styles.header}>Main content</h1>
+        <Card>
+          <ItemListContainer />
+        </Card>
       </header>
     </div>
   );
