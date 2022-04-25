@@ -1,0 +1,14 @@
+.div-fot {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 4rem;
+}
+
+.li-fot {
+    padding-right: 1rem;
+}
+
+.a-fot {
+    text-decoration: none;
+}
