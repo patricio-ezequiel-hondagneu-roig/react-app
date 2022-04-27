@@ -7,12 +7,16 @@ import Footer from './components/Footer/Footer';
 
 function App() {
 
+  const onAdd = () => {
+    alert(`Se agrego al carrito`)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
         <Card>
-          <ItemListContainer stock="5" />
+          <ItemListContainer stock="5" initial="1" onAdd={onAdd} />
         </Card>
         <Footer />
       </header>

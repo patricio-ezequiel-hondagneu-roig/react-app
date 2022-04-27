@@ -2,3 +2,19 @@
     width: 18rem;
     display: inline-block !important;
 }
+
+.btn-primary {
+    color: rgba(247, 243, 243, 0.932) !important;
+    background-color: rgb(33, 37, 41) !important;
+    border-color: rgba(255, 217, 0, 0.562) !important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 .2rem rgba(255, 217, 0, 0.363) !important;
+}
+
+.btn-primary:hover {
+    color: #f3f3f3 !important;
+    background-color: rgb(46 44 44 / 75%) !important;
+    border-color: rgba(255, 217, 0, 0.562) !important;
+}

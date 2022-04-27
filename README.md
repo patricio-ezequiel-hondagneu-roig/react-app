@@ -12,3 +12,7 @@ Desafío: Crea tu landing:
 Desafío: Contador con botón:
     Agregando contador a cada card.
     Agregando componente footer
+
+Fix Desafío: Contador con botón:
+    Valor inicial agregado
+

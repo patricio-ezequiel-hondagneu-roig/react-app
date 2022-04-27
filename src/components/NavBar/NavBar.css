@@ -9,6 +9,20 @@
     border-color: rgba(255, 217, 0, 0.288) !important;
 }
 
+.btn-outline-success:active {
+    color: black !important;
+    background-color: grey !important;
+}
+
+.btn-outline-success:focus {
+    box-shadow: 0 0 0 .2rem rgba(255, 217, 0, 0.575) !important
+}
+
+.outline-success:active {
+    color: rgba(192, 189, 189, 0.582) !important;
+    border-color: rgba(255, 217, 0, 0.288) !important;
+}
+
 .nav-link:hover {
     color: rgba(255, 217, 0, 0.562) !important
 }
