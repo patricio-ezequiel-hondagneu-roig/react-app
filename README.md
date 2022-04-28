@@ -16,3 +16,5 @@ Desafío: Contador con botón:
 Fix Desafío: Contador con botón:
     Valor inicial agregado
 
+Desafío: Catálogo con MAPS y Promises :
+    Agregando maps y promises con una simulacion de retraso de red (setTimeOut)
