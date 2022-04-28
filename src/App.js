@@ -1,9 +1,8 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import Card from "./components/Card/Card"
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from './components/Footer/Footer';
+import GameListContainer from './components/GameListContainer/GameContainer';
 
 function App() {
 
@@ -15,9 +14,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <Card>
-          <ItemListContainer stock="5" initial="1" onAdd={onAdd} />
-        </Card>
+        <GameListContainer stock="5" initial="1" onAdd={onAdd} />
         <Footer />
       </header>
     </div>
