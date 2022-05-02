@@ -22,3 +22,18 @@
 .height {
     height: 15rem;
 }
+
+.div-stock-precio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stock {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.precio {
+    font-weight: bold;
+
+}

@@ -18,3 +18,6 @@ Fix Desafío: Contador con botón:
 
 Desafío: Catálogo con MAPS y Promises :
     Agregando maps y promises con una simulacion de retraso de red (setTimeOut)
+
+Desafio: Desafío: Detalle de Producto:
+    Agregando componentes GetGame y GameDetail
