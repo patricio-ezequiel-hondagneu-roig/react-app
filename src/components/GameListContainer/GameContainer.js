@@ -8,4 +8,4 @@ const GameContainer = (props) => {
         </div>
     )
 }
-export default GameContainer
+export { GameContainer }

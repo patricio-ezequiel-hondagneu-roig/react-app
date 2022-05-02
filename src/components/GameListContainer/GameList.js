@@ -24,7 +24,7 @@ const GameList = (props) => {
 
     return (
         <div>
-            {games.map(g => <GameCard key={g.id} game={g} stock={props.stock} initial={props.initial} onAdd={props.onAdd} />)}
+            {games.map(g => <GameCard key={g.id} game={g} initial={props.initial} onAdd={props.onAdd} />)}
         </div>
     )
 }
