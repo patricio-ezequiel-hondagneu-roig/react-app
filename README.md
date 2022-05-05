@@ -21,3 +21,7 @@ Desafío: Catálogo con MAPS y Promises :
 
 Desafio: Desafío: Detalle de Producto:
     Agregando componentes GetGame y GameDetail
+
+Pre-entrega: Primera Entrega del Proyecto Final:
+    Agregando boton mostrar informacion para mostrar detalle del producto
+    Agregando react-router-dom con sus rutas

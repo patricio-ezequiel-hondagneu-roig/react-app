@@ -35,5 +35,8 @@
 
 .precio {
     font-weight: bold;
+}
 
+.card-description {
+    display: block;
 }
