@@ -15,19 +15,19 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <Link to="/"><a className="navbar-brand">Gaming shop</a></Link>
+                <Link to="/"><span className="navbar-brand">Gaming shop</span></Link>
                 <div className="navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item"><Link to={"/"}>
-                            <a className="nav-link" aria-current="page">Inicio</a>
+                            <span className="nav-link" aria-current="page">Inicio</span>
                         </Link></li>
                         <li className="nav-item"><Link to="/">
-                            <a className="nav-link">Juegos</a>
+                            <span className="nav-link">Juegos</span>
                         </Link></li>
                     </ul>
                     {categories.map((c) => (
-                        <li className="navbar-nav nav-item"><Link to={`/category/${c.categoryId}`}>
-                            <a className="nav-link" aria-current="page">{c.categoryName}</a>
+                        <li key={c.categoryId} className="navbar-nav nav-item"><Link to={`/category/${c.categoryId}`}>
+                            <span className="nav-link" aria-current="page">{c.categoryName}</span>
                         </Link></li>)
                     )}
                     <form className="d-flex me-2">

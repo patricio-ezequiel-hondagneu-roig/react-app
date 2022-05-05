@@ -11,7 +11,7 @@ const GameDetail = (props) => {
                 <img src={img} className="card-img-top height" alt=""></img>
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
-                    <Link to={`/game/${id}`}><button type="button" class="btn btn-primary" >Mostrar Informacion</button></Link>
+                    <Link to={`/game/${id}`}><button type="button" className="btn btn-primary" >Mostrar Informacion</button></Link>
                 </div>
             </div>
         </>

@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <div style={{ height: 87.2 + "vh" }}>
+      <div className='app-div'>
         <Routes>
           <Route path="/" element={<GameContainer />}></Route>
           <Route path="/category/:categoryId" element={<GameContainer />}></Route>
