@@ -1,7 +1,6 @@
 export const gamesData = [
     {
-        categoryId: "0",
-        category: "shooter",
+        categoryId: "shooter",
         id: "0",
         title: "Half Life Alyx",
         img: "https://i0.wp.com/hipertextual.com/wp-content/uploads/2020/02/hipertextual-half-life-alyx-tiene-fecha-lanzamiento-2020245237.jpg?w=1560&quality=50&strip=all&ssl=1",
@@ -10,8 +9,7 @@ export const gamesData = [
         precio: 782
     },
     {
-        categoryId: "0",
-        category: "shooter",
+        categoryId: "shooter",
         id: "1",
         title: "Half Life",
         img: "https://i.blogs.es/95bc11/2560_3000-1-/450_1000.jpg",
@@ -20,8 +18,7 @@ export const gamesData = [
         precio: 99
     },
     {
-        categoryId: "1",
-        category: "rogue-like",
+        categoryId: "rogue-like",
         id: "2",
         title: "Hades",
         img: "https://cdn2.unrealengine.com/hades-eventcover-01-800x450-983740629.png?h=480&resize=1&w=854",
@@ -30,8 +27,7 @@ export const gamesData = [
         precio: 534
     },
     {
-        categoryId: "1",
-        category: "rogue-like",
+        categoryId: "rogue-like",
         id: "3",
         title: "The Binding of Isaac: Rebirth",
         img: "https://media.vandal.net/i/1024x1024/20175/the-binding-of-isaac-rebirth-2014116124043_1.jpg",

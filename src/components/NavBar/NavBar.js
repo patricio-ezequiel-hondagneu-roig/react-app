@@ -18,19 +18,18 @@ const NavBar = () => {
                 <Link to="/"><a className="navbar-brand">Gaming shop</a></Link>
                 <div className="navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item"><Link to={"/index"}>
+                        <li className="nav-item"><Link to={"/"}>
                             <a className="nav-link" aria-current="page">Inicio</a>
                         </Link></li>
                         <li className="nav-item"><Link to="/">
                             <a className="nav-link">Juegos</a>
                         </Link></li>
                     </ul>
-                    <li className="navbar-nav nav-item"><Link to={`/category/${categories[0].category}`}>
-                        <a className="nav-link" aria-current="page">Shooter</a>
-                    </Link></li>
-                    <li className="navbar-nav nav-item"><Link to={`/category/${categories[1].category}`}>
-                        <a className="nav-link" aria-current="page">Rogue like</a>
-                    </Link></li>
+                    {categories.map((c) => (
+                        <li className="navbar-nav nav-item"><Link to={`/category/${c.categoryId}`}>
+                            <a className="nav-link" aria-current="page">{c.categoryName}</a>
+                        </Link></li>)
+                    )}
                     <form className="d-flex me-2">
                         <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
                         <button className="btn btn-outline-success" type="submit">Buscar</button>

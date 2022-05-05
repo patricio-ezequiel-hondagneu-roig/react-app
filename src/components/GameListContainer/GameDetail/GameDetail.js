@@ -5,8 +5,6 @@ const GameDetail = (props) => {
 
     const { id, title, img } = props.props.game
 
-    /*     console.log(props) */
-
     return (
         <>
             <div className="card card-style">

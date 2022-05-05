@@ -18,7 +18,7 @@ function App() {
       <div style={{ height: 87.2 + "vh" }}>
         <Routes>
           <Route path="/" element={<GameContainer />}></Route>
-          <Route path="/category/:id" element={<GameContainer />}></Route>
+          <Route path="/category/:categoryId" element={<GameContainer />}></Route>
           <Route path="/game/:gameId" element={<GameDetailItem stock={5} initial={1} onAdd={onAdd} />}></Route>
         </Routes>
       </div>

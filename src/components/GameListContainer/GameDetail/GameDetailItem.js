@@ -15,6 +15,8 @@ const GameDetailItem = (props) => {
         setGame(gamesData.find(g => g.id === gameId))
     }, [gameId])
 
+
+
     const [count, setCount] = useState(props.initial)
 
     const onAdd = () => {

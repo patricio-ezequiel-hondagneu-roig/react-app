@@ -1,10 +1,10 @@
 export const categories = [
     {
-        categoryId: "0",
-        category: "shooter"
+        categoryId: "shooter",
+        categoryName: "Shooter"
     },
     {
-        categoryId: "1",
-        category: "roguelike"
+        categoryId: "rogue-like",
+        categoryName: "Rogue-like"
     }
 ]
