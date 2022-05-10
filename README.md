@@ -25,3 +25,6 @@ Desafio: Desafío: Detalle de Producto:
 Pre-entrega: Primera Entrega del Proyecto Final:
     Agregando boton mostrar informacion para mostrar detalle del producto
     Agregando react-router-dom con sus rutas
+
+Desafío: CartContext:
+    Agregando context para carrito
