@@ -1,9 +1,9 @@
 import GameList from "./GameList"
 
-const GameContainer = (props) => {
+const GameContainer = () => {
 
     return (
-        <GameList stock={props.stock} initial={props.initial} onAdd={props.onAdd} />
+        <GameList />
     )
 }
 export { GameContainer }

@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
 import { gamesData } from "../../../data/gamesData"
+import { CartContext } from "../../../context/cartContext"
 
 
 const GameDetailItem = (props) => {
@@ -9,18 +10,28 @@ const GameDetailItem = (props) => {
     const { gameId } = useParams()
     const [game, setGame] = useState({})
 
-
+    const { upsert, isInCart, cart } = useContext(CartContext)
 
     useEffect(() => {
         setGame(gamesData.find(g => g.id === gameId))
     }, [gameId])
 
+    const [count, setCount] = useState(isInCart(gameId) ? cart.find((item) => item.game.id === gameId).count : props.initial)
 
+    const onAddHandler = () => {
+        const cartItem = {
+            game: game,
+            count: count
+        }
+        upsert(cartItem)
+    }
 
-    const [count, setCount] = useState(props.initial)
-
-    const onAdd = () => {
-        props.onAdd(count)
+    const addToCartLabel = () => {
+        if (isInCart(gameId)) {
+            return "Actualizar carrito"
+        } else {
+            return "Agregar al carrito"
+        }
     }
 
     const resHandler = () => {
@@ -45,9 +56,9 @@ const GameDetailItem = (props) => {
                         <p className="card-text">{game.description}</p>
                         <div className="div-stock-precio">
                             <p className="stock"> Stock actual : {game.stock}</p>
-                            <span className="precio"> Precio : ${game.precio}</span>
+                            <span className="precio"> Precio : ${game.price}</span>
                         </div>
-                        <a href="#" className="btn btn-primary" onClick={onAdd} >Añadir al carrito</a>
+                        <button className="btn btn-primary" onClick={onAddHandler} >{addToCartLabel()}</button>
                         <ItemCount count={count} resHandler={resHandler} addHandler={addHandler} />
                     </div>
                 </div>

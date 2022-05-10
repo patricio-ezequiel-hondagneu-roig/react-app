@@ -18,7 +18,7 @@ const GetGames = (props) => {
         const getGamesPromise = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(gamesData)
-            }, 2000);
+            });
         })
 
         getGamesPromise.then(res => {
