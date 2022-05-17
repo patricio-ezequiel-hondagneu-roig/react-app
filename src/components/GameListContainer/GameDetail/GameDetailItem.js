@@ -21,7 +21,8 @@ const GameDetailItem = (props) => {
     const onAddHandler = () => {
         const cartItem = {
             game: game,
-            count: count
+            count: count,
+            totalPrice: game.price * count
         }
         upsert(cartItem)
     }

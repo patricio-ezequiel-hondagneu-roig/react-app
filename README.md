@@ -28,3 +28,10 @@ Pre-entrega: Primera Entrega del Proyecto Final:
 
 Desafío: CartContext:
     Agregando context para carrito
+
+Desafío: Cart View:
+    Agregando tostify para las alertas
+    Agregando monto total por item y monto total entre items
+    Agregando cambio de vista cuando el carrito esta vacio
+    Agregando cambio de vista cuando el cart widget esta vacio
+    Agregando contador de productos al cart widget
