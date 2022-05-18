@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { gamesData } from "../../../data/gamesData"
 import GameCard from "../gameCard/GameCard"
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 
 
 const GetGames = (props) => {
@@ -11,20 +11,29 @@ const GetGames = (props) => {
     const { categoryId } = useParams()
 
     useEffect(() => {
-        getGames()
+
+        const db = getFirestore()
+
+        const gameCollection = collection(db, "games")
+
+        const consulta = getDocs(gameCollection)
+
+        consulta
+            .then((res) => {
+
+                const games = res.docs.map(doc => {
+
+                    const gameIdBd = doc.data()
+                    gameIdBd.id = doc.id
+                    return gameIdBd
+
+                })
+
+                setGames(games)
+
+            })
+
     }, [])
-
-    const getGames = () => {
-        const getGamesPromise = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(gamesData)
-            });
-        })
-
-        getGamesPromise.then(res => {
-            setGames(res)
-        })
-    }
 
     return (
         <>
@@ -34,7 +43,7 @@ const GetGames = (props) => {
                 } else {
                     return g.categoryId === categoryId;
                 }
-            }).map(g => <GameCard key={g.id} game={g} initial={props.props.initial} onAdd={props.props.onAdd} />)}
+            }).map(g => <GameCard key={g.id} game={g} initial={props.props.initial} />)}
         </>
     )
 }

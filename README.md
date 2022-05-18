@@ -35,3 +35,6 @@ Desafío: Cart View:
     Agregando cambio de vista cuando el carrito esta vacio
     Agregando cambio de vista cuando el cart widget esta vacio
     Agregando contador de productos al cart widget
+
+Desafio: Desafío: Item Collection:
+    Agregando el uso de Firebase para consumir datos desde una base de datos

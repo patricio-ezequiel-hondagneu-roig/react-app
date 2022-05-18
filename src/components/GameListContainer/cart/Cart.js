@@ -32,7 +32,7 @@ const Cart = () => {
                 <h2>Carrito</h2>
                 {cart.map(c =>
                     <li>
-                        {`Titulo: ${c.game.title}, Precio: $${c.game.price}, Cantidad: ${c.count}, Total: ${c.game.price * c.count}`}
+                        {`Titulo: ${c.game.title}, Precio: $${c.game.price}, Cantidad: ${c.count}, Total: $${c.game.price * c.count}`}
                         <button className="btn btn-primary" onClick={() => { removeFromCart(c.game.id) }}>
                             <span className="material-symbols-outlined">
                                 delete

@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
-import { gamesData } from "../../../data/gamesData"
+
 import { CartContext } from "../../../context/cartContext"
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 
 
 const GameDetailItem = (props) => {
@@ -13,8 +14,26 @@ const GameDetailItem = (props) => {
     const { upsert, isInCart, cart } = useContext(CartContext)
 
     useEffect(() => {
-        setGame(gamesData.find(g => g.id === gameId))
-    }, [gameId])
+        const db = getFirestore()
+
+        const gameCollection = collection(db, "games")
+        const consulta = getDocs(gameCollection)
+
+        consulta
+            .then((res) => {
+
+                const games = res.docs.map(doc => {
+
+                    const gameIdBd = doc.data()
+                    gameIdBd.id = doc.id
+                    return gameIdBd
+
+                })
+                setGame(games.find(g => g.id === gameId))
+
+            })
+
+    }, [])
 
     const [count, setCount] = useState(isInCart(gameId) ? cart.find((item) => item.game.id === gameId).count : props.initial)
 
