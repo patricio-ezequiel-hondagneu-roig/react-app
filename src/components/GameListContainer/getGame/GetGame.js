@@ -18,21 +18,16 @@ const GetGames = (props) => {
 
         const consulta = getDocs(gameCollection)
 
-        consulta
-            .then((res) => {
-
-                const games = res.docs.map(doc => {
-
-                    const gameIdBd = doc.data()
-                    gameIdBd.id = doc.id
-                    return gameIdBd
-
+        consulta.then((res) => {
+            const games = res.docs
+                .map(doc => ({ id: doc.id, ...doc.data() }))
+                .sort((a, b) => {
+                    if (a.title > b.title) return 1
+                    if (b.title > a.title) return -1
+                    return 0
                 })
-
-                setGames(games)
-
-            })
-
+            setGames(games)
+        })
     }, [])
 
     return (

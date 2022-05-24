@@ -31,6 +31,12 @@ const CartProvider = ({ children }) => {
         setCart([])
     }
 
+    const cartTotalPrice = () => {
+        return cart.reduce((acumulado, actual) => {
+            return acumulado + actual.totalPrice
+        }, 0)
+    }
+
     const removeFromCart = (gameId) => {
         const cartWithoutGame = cart.filter((item) => item.game.id !== gameId);
         setCart(cartWithoutGame)
@@ -47,6 +53,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         removeFromCart,
         isInCart,
+        cartTotalPrice
     }
 
     return (

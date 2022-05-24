@@ -19,7 +19,7 @@ Fix Desafío: Contador con botón:
 Desafío: Catálogo con MAPS y Promises :
     Agregando maps y promises con una simulacion de retraso de red (setTimeOut)
 
-Desafio: Desafío: Detalle de Producto:
+Desafio: Detalle de Producto:
     Agregando componentes GetGame y GameDetail
 
 Pre-entrega: Primera Entrega del Proyecto Final:
@@ -36,5 +36,8 @@ Desafío: Cart View:
     Agregando cambio de vista cuando el cart widget esta vacio
     Agregando contador de productos al cart widget
 
-Desafio: Desafío: Item Collection:
+Desafio: Item Collection:
     Agregando el uso de Firebase para consumir datos desde una base de datos
+
+Desafío: Item Collection II:
+    Agregando formulario para hacer ordenes de compra y guardarlas en Firebase

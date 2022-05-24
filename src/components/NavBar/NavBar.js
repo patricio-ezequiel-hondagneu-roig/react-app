@@ -32,7 +32,7 @@ const NavBar = () => {
                     )}
                     <form className="d-flex me-2">
                         <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"></input>
-                        <button className="btn btn-outline-success" type="submit">Buscar</button>
+                        <button className="btn btn-outline-success" type="button">Buscar</button>
                     </form>
                     <div>
                         <CartWidget />
