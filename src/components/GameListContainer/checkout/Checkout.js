@@ -12,7 +12,7 @@ const Checkout = () => {
 
     const orderCollection = collection(db, "orders");
 
-    const { cart } = useContext(CartContext);
+    const { cart, clearCart } = useContext(CartContext);
 
     const [order, setOrder] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -36,10 +36,15 @@ const Checkout = () => {
 
             setIsLoading(true);
 
-            const respuesta = await addDoc(orderCollection, buyerToSave);
-
-            setIsLoading(false);
-            setOrder(respuesta.id);
+            try {
+                const respuesta = await addDoc(orderCollection, buyerToSave);
+                setOrder(respuesta.id);
+                clearCart();
+            } catch (error) {
+                toast("Se cayo el sistema")
+            } finally {
+                setIsLoading(false);
+            }            
 
         } else {
             toast("Falta completar un campo");
@@ -50,7 +55,7 @@ const Checkout = () => {
         processPurchase();
     };
 
-    if (cart.length === 0) {
+    if (cart.length === 0 && order === null) {
         return <Navigate to='/cart' />;
     }
     else {
