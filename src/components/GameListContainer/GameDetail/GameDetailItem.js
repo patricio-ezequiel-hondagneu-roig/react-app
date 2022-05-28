@@ -33,6 +33,7 @@ const GameDetailItem = (props) => {
 
             })
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const [count, setCount] = useState(isInCart(gameId) ? cart.find((item) => item.game.id === gameId).count : props.initial)

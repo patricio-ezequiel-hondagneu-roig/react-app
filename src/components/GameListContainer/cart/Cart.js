@@ -44,7 +44,7 @@ const Cart = () => {
                 )}
                 <div>{`Monto total: $${cartTotalPrice()}`} </div>
                 <button className="btn btn-primary text-decoration-none" onClick={clearCartHandler}>Borrar Carrito</button>
-                <Link to="/form"><button className="btn btn-primary">Comprar</button></Link>
+                <Link to="/checkout"><button className="btn btn-primary">Comprar</button></Link>
             </>
         )
 }

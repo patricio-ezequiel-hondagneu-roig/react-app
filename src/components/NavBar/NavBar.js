@@ -1,17 +1,9 @@
-import './NavBar.css'
-import CartWidget from "./CartWidget/CartWidget"
-import { Link, useParams } from 'react-router-dom'
-import { categories } from "../../data/categories"
-import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import { categories } from "../../data/categories";
+import CartWidget from "./CartWidget/CartWidget";
+import './NavBar.css';
+
 const NavBar = () => {
-
-    const { categoryId } = useParams()
-    const [category, setCategory] = useState({})
-
-    useEffect(() => {
-        setCategory(categories.find(c => c.categoryId === categoryId))
-    }, [categoryId])
-
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
@@ -36,13 +28,6 @@ const NavBar = () => {
                     </form>
                     <div>
                         <CartWidget />
-                    </div>
-                    <div>
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Ingresar</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
